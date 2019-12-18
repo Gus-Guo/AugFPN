@@ -1,8 +1,6 @@
-# FPN ++
+# AugFPN
 dev branch
 
-This repository will constain the source code of FPN++ in pytorch. Coming soon...
-aaa
+This repository will constain the source code of AugFPN in pytorch. Coming soon...
 
-this is the revision of local 2333
 
