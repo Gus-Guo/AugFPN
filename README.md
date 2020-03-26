@@ -57,7 +57,7 @@ For example,
 python tools/test.py configs/mask_rcnn_r50_augfpn_1x.py <CHECKPOINT_FILE> --gpus 8 --out results.pkl --eval bbox segm
 ```
 
-Results on testdev
+Results on MS COCO testdev2017
 ---------
 | Backbone | detector | mAP(mask) | mAP(det)  |
 |----------|--------|-----------|-----------|
