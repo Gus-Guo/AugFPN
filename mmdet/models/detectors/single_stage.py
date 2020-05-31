@@ -62,7 +62,7 @@ class SingleStageDetector(BaseDetector):
             else:
                 self.neck.init_weights()
         self.bbox_head.init_weights()
-        if self.train_cfg.train_with_auxiliary:  
+        if self.use_consistent_supervision:  
             self.auxiliary_bbox_head.init_weights()
             
     def extract_feat(self, img):

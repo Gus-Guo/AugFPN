@@ -126,7 +126,7 @@ class HighFPNRetinanet(nn.Module):
         fusion_weights = F.sigmoid(fusion_weights)
         high_pool_fusion = 0
         for i in range(3):
-            high_pool_fusion += torch.unsqueeze(fusion_weights[:,i,:,:], dim=1) * AdapPool[i]
+            high_pool_fusion += torch.unsqueeze(fusion_weights[:,i,:,:], dim=1) * AdapPool_Features[i]
         raw_laternals = [laterals[i].clone() for i in range(len(laterals))]
         # build top-down path
         
