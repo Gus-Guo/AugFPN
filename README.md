@@ -1,5 +1,5 @@
 
-AugFPN: Improving Multi-scale Feature Learning for Object Detection
+AugFPN: Improving Multi-scale Feature Learning for Object Detection(CVPR 2020)
 ---------------------
 By Chaoxu Guo, Bin Fan, Qian Zhang, Shiming Xiang, Chunhong Pan
 
