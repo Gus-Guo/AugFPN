@@ -36,6 +36,7 @@ python(3) setup.py install  # add --user if you want to install it locally
 
 
 ### Intsall with Conda
+another option to install:
 
 ```shell
 conda create -n open-mmlab python=3.7 -y
@@ -43,9 +44,10 @@ source activate open-mmlab
 
 conda install -c pytorch pytorch torchvision -y
 conda install cython -y
-git clone https://github.com/open-mmlab/mmdetection.git
-cd mmdetection
-pip install -v -e .
+git clone https://github.com/Gus-Guo/AugFPN.git
+cd AugFPN
+bash compile.sh
+pip install .
 ```
 see more details at [mmdetection](https://github.com/open-mmlab/mmdetection)
 
