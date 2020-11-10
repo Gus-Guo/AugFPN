@@ -75,7 +75,7 @@ def main():
     dataset = obj_from_dict(cfg.data.test, datasets, dict(test_mode=True))
     if args.gpus == 1:
         model = build_detector(
-            cfg.model, train_cfg=None, test_cfg=cfg.test_cfg)
+            cfg.model, train_cfg=cfg.train_cfg, test_cfg=cfg.test_cfg)
         load_checkpoint(model, args.checkpoint)
         model = MMDataParallel(model, device_ids=[0])
 
@@ -89,7 +89,7 @@ def main():
         outputs = single_test(model, data_loader, args.show)
     else:
         model_args = cfg.model.copy()
-        model_args.update(train_cfg=None, test_cfg=cfg.test_cfg)
+        model_args.update(train_cfg=cfg.train_cfg, test_cfg=cfg.test_cfg)
         model_type = getattr(detectors, model_args.pop('type'))
         outputs = parallel_test(
             model_type,
